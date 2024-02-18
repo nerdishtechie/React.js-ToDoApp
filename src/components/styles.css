@@ -1,0 +1,124 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .app {
+    padding: 20px;
+  }
+  
+  .todo-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-list h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+    color: #007bff; 
+  }
+  
+  .todo-form {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .todo-form input[type='text'],
+  .todo-form button {
+    border-radius: 20px;
+  }
+  
+  .todo-form input[type='text'] {
+    width: calc(100% - 80px);
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    outline: none;
+  }
+  
+  .todo-form button {
+    width: 120px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007bff; 
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .filter-buttons button {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .filter-buttons button.active {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+  }
+  
+  .task span {
+    flex: 1;
+    padding-left: 15px;
+  }
+  
+  .task.completed {
+    text-decoration: line-through;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .app {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    .todo-form input[type='text'] {
+    
+      width: calc(100% - 85px);
+      margin-right: 10px;
+    }
+  
+    .filter-buttons button {
+      flex-basis: 30%;
+    }
+  }
+  
